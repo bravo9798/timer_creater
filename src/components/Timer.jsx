@@ -28,10 +28,9 @@ const Timer = () => {
     return () => clearInterval(timer);
   }, []);
 
-  // Function to handle timer deletion
+
   const handleDeleteTimer = (timerIndex) => {
     setTimers((prevTimers) => {
-      // Remove timer at specified index
       const updatedTimers = [...prevTimers];
       updatedTimers.splice(timerIndex, 1);
       return updatedTimers;
