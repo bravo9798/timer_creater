@@ -62,3 +62,16 @@ code {
   width: 40%;
   cursor: pointer;
 }
+
+.leftTimerSection{
+  flex: 1
+}
+.timerLi{
+  list-style: none;
+}
+.rightTimerSection{
+  flex:1
+}
+.timerInput{
+  width: 40%;
+}

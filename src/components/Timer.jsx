@@ -38,14 +38,14 @@ const Timer = () => {
   };
 
   return (
-    <div className="mainTimer" style={{ display: "flex" }}>
-      <div className="leftTimerSection" style={{ flex: 1 }}>
+    <div className="mainTimer">
+      <div className="leftTimerSection">
         <h2>Timers</h2>
         <ul
         className="timerUl"
         >
           {timers.map((timer, index) => (
-            <li style={{ listStyle: "none" }} key={index}>
+            <li className="timerLi"  key={index}>
               <TimerBox
                 timer={timer}
                 handleDeleteTimer={handleDeleteTimer}
@@ -55,7 +55,7 @@ const Timer = () => {
           ))}
         </ul>
       </div>
-      <div className="rightTimerSection" style={{ flex: 1 }}>
+      <div className="rightTimerSection" >
         <h2>New Timer</h2>
         <form
           onSubmit={handleSubmit}
@@ -63,7 +63,7 @@ const Timer = () => {
         >
           <input
             type="number"
-            style={{ width: "40%" }}
+            className="timerInput"
             value={newTimer}
             onChange={(e) => setNewTimer(e.target.value)}
           />
